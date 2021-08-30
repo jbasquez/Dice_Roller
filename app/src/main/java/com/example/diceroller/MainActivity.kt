@@ -2,6 +2,7 @@ package com.example.diceroller
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -22,9 +23,10 @@ class MainActivity : AppCompatActivity() {
         val dice = Dice(6)
         //uses 6 to do a rll function
         val diceRoll = dice.roll()
-        //finds the text box and turns the result of a number into a string and updates text
-        val resultTextView: TextView = findViewById(R.id.textView)
-        resultTextView.text = diceRoll.toString()
+        //selects dice image by its id "imageview"
+        val diceImage: ImageView = findViewById(R.id.imageView)
+        //sets dice image to dice 2 when a 2 is rolled
+        diceImage.setImageResource(R.drawable.dice_2)
     }
 }
 
